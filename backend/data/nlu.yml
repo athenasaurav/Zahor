@@ -1,0 +1,184 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: email_edit
+  examples: |
+    - i want to update email
+    - edit email
+    - i can see some issue with my email. Need to update that
+    - can i update my email
+    - update email
+    - email update
+    - change email
+    - i want to change email address
+    - start process for email change
+    - change my email address
+
+- intent: issue_date_edit
+  examples: |
+    - i want to update issue date
+    - edit issue date
+    - i can see some issue with my issue date. Need to update that
+    - can i update my issue date
+    - update issue date
+    - issue date update
+    - change issue date
+    - i want to change issue date address
+    - start process for issue date change
+    - change my issue date address
+
+
+- intent: ID_edit
+  examples: |
+    - i want to update ID
+    - edit ID
+    - i can see some issue with my ID. Need to update that
+    - can i update my ID
+    - update ID
+    - ID update
+    - change ID
+    - i want to change ID address
+    - start process for ID change
+    - change my ID address
+
+- intent: Email
+  examples: |
+    - my email is [test@example.com]{"entity": "email", "value": "test@example.com"}
+    - my email is [abraham.lincoln@gmail.com]{"entity": "email", "value": "abraham.lincoln@gmail.com"}
+    - [name.name@yahoo.com]{"entity": "email", "value": "name.name@yahoo.com"}
+    - Mi email es [example@example.com]{"entity": "email", "value": "example@example.com"}
+    - [random@example.com]{"entity": "email", "value": "random@example.com"}
+    - [geo@gmail.com]{"entity": "email", "value": "geo@gmail.com"}
+    - [huascar.tejeda@gmail.com]{"entity": "email", "value": "huascar.tejeda@gmail.com"}
+    - [pedro_mario@gmail.com]{"entity": "email", "value": "pedro_mario@gmail.com"}
+    - Email is [something@example.com]{"entity": "email", "value": "something@example.com"}
+    - my email is [something@example.com]{"entity": "email", "value": "something@example.com"}
+    - my email is [testnew@microsoft.com]{"entity": "email", "value": "testnew@microsoft.com"}
+    - my email is [abraham@prescient.com]{"entity": "email", "value": "abraham@prescient.com"}
+    - [name_jaya@yahoo.com]{"entity": "email", "value": "name_jaya@yahoo.com"}
+    - Mi email es [heman@katapa.co.in]{"entity": "email", "value": "heman@katapa.co.in"}
+    - [random@example.co.uk]{"entity": "email", "value": "random@example.co.uk"}
+    - [geo@gmail.ai]{"entity": "email", "value": "geo@gmail.ai"}
+    - [huascar.tejeda@gmail.in]{"entity": "email", "value": "huascar.tejeda@gmail.in"}
+    - [pedro_mario@gmail.in]{"entity": "email", "value": "pedro_mario@gmail.in"}
+    - Email is [something@example.edu]{"entity": "email", "value": "something@example.edu"}
+    - my email is [common1232@example.edu]{"entity": "email", "value": "common1232@example.edu"}
+
+- intent: Issue_date
+  examples: |
+    - [01-12-21]{"entity": "issue_date", "value": "01-12-21"}
+    - [01-07-2021]{"entity": "issue_date", "value": "01-07-2021"}
+    - [11-05-21]{"entity": "issue_date", "value": "11-5-21"}
+    - [11/04/19]{"entity": "issue_date", "value": "11/04/19"}
+
+- intent: ID
+  examples: |
+    - [121]{"entity": "ID", "value": "121"}
+    - [999]{"entity": "ID", "value": "999"}
+    - [1211]{"entity": "ID", "value": "1211"}
+    - [12]{"entity": "ID", "value": "12"}
+    - [11]{"entity": "ID", "value": "11"}
+    - [1272]{"entity": "ID", "value": "1272"}
+    - [9321]{"entity": "ID", "value": "9321"}
+    - [3256]{"entity": "ID", "value": "3256"}
+    - [100006]{"entity": "ID", "value": "100006"}
+
+- intent: signed
+  examples: |
+    - signed
+    - i have signed the document
+    - signature done.
+    - i have done signing the document. 
+    - done with sign.
+    - can you check i have signed the document.

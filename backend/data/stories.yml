@@ -1,0 +1,62 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: email edit path
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: affirm
+  - action: action_greet_followup
+  - intent: email_edit
+  - action: utter_email
+  - intent: Email
+    entities:
+    - email: "example@example.com"
+  - slot_was_set:
+    - email: "example@example.com"
+  - action: action_update_email
+  - intent: signed
+  - action: action_verify_signed
+
+- story: issue date edit path
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: affirm
+  - action: action_greet_followup
+  - intent: issue_date_edit
+  - action: utter_issue_date
+  - intent: Issue_date
+    entities:
+    - issue_date: "01-22-11"
+  - slot_was_set:
+    - issue_date: "01-22-11"
+  - action: action_update_issue_date
+  - intent: signed
+  - action: action_verify_signed
+
+
+- story: ID edit path
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: affirm
+  - action: action_greet_followup
+  - intent: ID_edit
+  - action: utter_ID
+  - intent: ID
+    entities:
+    - ID: "121"
+  - slot_was_set:
+    - ID: "121"
+  - action: action_update_ID
+  - intent: signed
+  - action: action_verify_signed

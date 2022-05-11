@@ -1,0 +1,77 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - email_edit
+  - issue_date_edit
+  - ID_edit
+  - Email
+  - ID
+  - Issue_date
+  - signed
+
+entities:
+- email
+- ID
+- issue_date
+
+slots:
+  email:
+    type: text
+    influence_conversation: false
+  ID:
+    type: text
+    influence_conversation: false
+  issue_date:
+    type: text
+    influence_conversation: false
+
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_email:
+  - text: "Please tell us your new Email address?"
+
+  utter_issue_date:
+  - text: "Please tell us your corrected Issue Date in dd-mm-yy format only?"
+
+  utter_ID:
+  - text: "Please tell us your corrected 3 digit ID"
+
+actions:
+- action_greet
+- action_greet_followup
+- action_update_email
+- action_update_issue_date
+- action_update_ID
+- action_verify_signed
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
